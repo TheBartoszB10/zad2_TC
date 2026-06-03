@@ -1,5 +1,5 @@
 # Official slim image
-FROM python:3.14.5-slim
+FROM python:3.15-rc-slim
 
 # Author information
 LABEL maintainer="Bartosz Brudkowski"
