@@ -31,7 +31,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v6
         with:
-          images: ${{ env.REGISTRY }}/zad2tc
+          images: ${{ env.REGISTRY }}/${{ github.actor }}/zad2tc
           tags: |
             type=sha,priority=100,prefix=sha-,format=short
             type=semver,priority=200,pattern={{version}}
