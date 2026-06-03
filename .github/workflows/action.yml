@@ -53,7 +53,7 @@ jobs:
       - name: Build local image for scanning
         uses: docker/build-push-action@v7
         with:
-          context: .
+          context: ./app
           load: true
           tags: local-scan-image:temp
           platforms: linux/amd64
@@ -71,7 +71,7 @@ jobs:
       - name: Build and push multi-arch image to GHCR
         uses: docker/build-push-action@v7
         with:
-          context: .
+          context: ./app
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
